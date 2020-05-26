@@ -1,2 +1,2 @@
 # UIUXDesign
-Websites created through my UI UX Course at The Tech Acadamy.
+Websites created through my UI UX program at The Tech Acadamy.
