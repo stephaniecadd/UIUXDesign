@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./CSS/Stylesheet.css">
+        <audio id="sound"><source src="Content/click.wav" type="audio/WAV"></audio>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <title>Canyon Hikers</title>
+    </head>
+    <body>
+        <!--Navbar-->
+        <div class="navbar">
+                <img id="logo" src="Content/Logo.png" alt="">
+                <a href="#Contact">Contact</a>
+                <a href="#Resources">Resources</a>
+                <a href="#Gallery">Gallery</a>
+                <a href="#About">About</a>
+                <a href="#Home">Home</a>
+        </div>
+
+        <!--Banner-->
+        <div class="banner">
+            <img class="bannerimg" src="Content/banner.jpg" alt="">
+            <h2>"The Earth has music for those who listen."</h2>
+            <h3><a href="#About">Learn more about the Grand Canyon.</a><h3>
+        </div>
+        
+        <!--About-->
+        <div id="About">
+            <h1>About</h1>
+            <p>
+                The Grand Canyon is one of the most beautiful places 
+                on Earth. It is a natural beauty and shows how magnificent 
+                nature is. With it’s brown and red toned rocks and blue topaz 
+                rivers it is truly like a painting. To see this wonder for 
+                yourself, contact me below!<br><br>Don’t wait to visit the Grand 
+                Canyon. Use this <a href="#Contact">contact form</a> to reach out to me about your 
+                interest and I will help you plan the adventure of your dreams!
+            </p>
+        </div>
+
+        <!--Gallery-->
+        <div id="Gallery">
+            <h1>Gallery</h1>
+            <div class="column">
+                <img src="Content/GrandCanyon1.jpg" alt="" style="width:100%">
+              </div>
+              <div class="column">
+                <img src="Content/GrandCanyon2.jpg" alt="" style="width:100%">
+              </div>
+              <div class="column">
+                <img src="Content/GrandCanyon3.jpg" alt="" style="width:100%">
+              </div>
+        </div>
+
+        <!--Contact-->
+    <div class="row">
+        <div id="Contact">
+            <h1>Contact</h1>
+        <form>
+            <input placeholder="First Name" type="text">
+            <input placeholder="Last Name" type="text">
+            <input placeholder="Email" type="text">
+            <select id="Interest">
+                <option>Interest</option>
+                <option value="Trip to Grand Canyon">Trip to Grand Canyon</option>
+                <option value="More Information">More Information</option>
+                <option value="Join Canyon Hikers">Join Canyon Hikers</option>
+                </select>
+        </form>
+        <button onclick="sound()" type="submit">Submit</button>
+        </div>
+        <!--Resources-->
+        <div id="Resources">
+            <h1>More Resources</h1>
+            <p>
+                To learn more about The Grand Canyon, I’ve compiled a 
+                list of resources that are very informational. Follow the 
+                links below for more information.
+            </p>
+            <div id="firstlinks">
+                <a id="npr" href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">National Parks Service</a>
+                <a href="https://www.livescience.com/27489-grand-canyon.html" target="_blank">Live Science</a>
+            </div>
+            <div id="secondlinks">
+                <a id="va" href="https://www.visitarizona.com/uniquely-az/must-see/grand-canyon" target="_blank">Visit Arizona</a>
+                <a href="https://en.wikipedia.org/wiki/Grand_Canyon" target="_blank">Wikipedia</a>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div id="Footer">
+        <p>&copy 2020 Canyon Hikers</p>
+    </div>
+
+    <script>
+        function sound(){
+            var audio = document.getElementById("sound");
+                audio.play();
+           }
+           gsap.to(".banner>h2", {duration: 2, x: 500});
+    </script>
+
+
+    </body>
+</html>

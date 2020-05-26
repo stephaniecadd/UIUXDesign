@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./CSS/Stylesheet.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <audio id="sound"><source src="onclicksound.wav" type="audio/WAV"></audio>
+        <audio id="noise"><source src="elephant9.wav" type="audio/WAV"></audio>
+        <title>Elephant Sanctuary</title>
+    </head>
+    <body>
+        <!--Navbar-->
+        <div class="navbar">
+            <h1>Elephant Sanctuary</h1>
+        <div class="menu">
+            <a href=#learn>Learn</a>
+            <a href=#mission>Mission</a>
+            <a href=#contact>Contact</a>
+            <a href=#donate>Donate</a>
+        </div>
+        </div>
+        <!--End navbar-->
+
+        <!--First Row-->
+        <div class="row">
+        <div class="headerimage">
+            <img onclick="elephant()" src="content/Elephant.jpg">
+        </div>
+        <div class="headertext">
+            <p>
+                There are three different species of elephant – 
+                the African Savannah elephant, the African Forest elephant 
+                and the Asian elephant. 
+            </p>
+            <a href=#learn class="learnlink">Learn More</a>
+            <hr>
+        </div>
+        </div>
+        <!--End first row-->
+
+        <!--Second Row-->
+        <div class="column1">
+            <h1>Documentary</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GyI2fbz9404" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="column2" id="learn">
+            <h1>Facts</h1>
+            <p>You can tell a lot about an elephant by looking at their tusks! Elephant tusks never stop growing, 
+                so enormous tusks can be a sign of an old elephant. Both male and female African elephants grow tusks, 
+                but only male Asian elephants grow them. A tusk-less adult elephant is likely to be a female Asian elephant.<br><br>
+                Elephants are the world’s largest land animal! Male African elephants can reach 3m tall and weigh between 
+                4,000 -7,500kg. Asian elephants are slightly smaller, reaching 2.7m tall and weighing 3,000– 6,000kg.
+            </p>
+        </div>
+        <!--End second row-->
+
+        <!--Third Row-->
+        <div class="column1" id="contact">
+            <h1>Contact</h1>
+            <form>
+                <input type="text" placeholder="First Name"name="first name">
+                <input type="text" placeholder="Last Name" name="last name">
+                <input type="text" placeholder="Email" name="email">
+                <input type="text" placeholder="Message" name="message" id="message">
+            </form>
+            <button onclick="play()" type="submit">Submit</button>
+        </div>
+        <div class="column2" id="mission">
+            <h1>Mission</h1>
+            <p>Elephants are great species. We work on making them safer and 
+                send our volunteers to keep their environment habitable. We also 
+                use our resources to teach about Elephants.<br><br>
+                We would appreciate your help and donation.
+            </p>
+            <a class="donatelink">Donate</a>
+            <hr>
+        </div>
+        <!--End third row-->
+
+        <script>
+            gsap.to("h1", {duration: 1, x: 100, ease: "bounce"});
+            function play(){
+            var audio = document.getElementById("sound");
+                audio.play();
+           }
+           function elephant(){
+            var audio = document.getElementById("noise");
+                audio.play();
+           }
+        </script>
+
+    </body>
+
+    <footer>
+        <h3 class="source">Fact Sources: https://www.natgeokids.com/za/discover/animals/general-animals/elephant-facts/</h3>
+        <h3 class="copyright">&copy 2020 Elephant Sanctuary</h3>
+        <div style="clear: both"></div>
+    </footer>
+
+
+</html>
